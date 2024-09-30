@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "karla", sans-serif;
+  font-size: 20px;
+}
+
+body {
+  height: 100vh;
+  background-color: #23233b;
+}
+
+#root {
+  height: 100%;
+}
+
+main,
+footer {
+  max-width: 500px;
+  width: 90%;
+  padding: 2em;
+}
+
+main {
+  border-radius: 10px 10px 0 0;
+  background-color: #ebebeb;
+  margin: 3em auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1,
+h2 {
+  margin: 0;
+  text-align: center;
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #323232;
+}
+
+h2 {
+  /* background-color: thistle; */
+  margin-top: 1em;
+  width: 350px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #757575;
+}
+
+.dice-container {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: repeat(5, 3em);
+  gap: 1em;
+  width: 100%;
+  justify-content: center;
+}
+
+.die {
+  padding: 5px;
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  justify-self: center;
+  align-self: center;
+  visibility: hidden;
+}
+
+.dot-three,
+.dot-nine {
+  grid-column: 3/4;
+}
+
+.one .dot-five {
+  visibility: visible;
+  background-color: #d50000;
+}
+
+.two .dot-three,
+.two .dot-seven {
+  visibility: visible;
+  background-color: #ff6600;
+}
+
+.three .dot-one,
+.three .dot-five,
+.three .dot-nine {
+  visibility: visible;
+  background-color: #00c853;
+}
+
+.four .dot-one,
+.four .dot-three,
+.four .dot-seven,
+.four .dot-nine {
+  visibility: visible;
+  background-color: #ffab00;
+}
+
+.five .dot-one,
+.five .dot-three,
+.five .dot-five,
+.five .dot-seven,
+.five .dot-nine {
+  visibility: visible;
+  background-color: #3399ff;
+}
+
+.six .dot-one,
+.six .dot-three,
+.six .dot-four,
+.six .dot-six,
+.six .dot-seven,
+.six .dot-nine {
+  visibility: visible;
+  background-color: #ff4081;
+}
+
+.roll-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: #6f42c1;
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: 700;
+  padding: 0.5em 2em;
+  margin-top: 3em;
+  cursor: pointer;
+}
+
+.roll-btn:hover {
+  background-color: #8e6bcf;
+}
+
+footer {
+  background-color: thistle;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 2em;
+  background-color: #ebebeb;
+  color: #757575;
+  margin: 0 auto;
+  border-radius: 0 0 10px 10px;
+}
+
+footer > * {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+h3 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.gameStat {
+  color: #323232;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
